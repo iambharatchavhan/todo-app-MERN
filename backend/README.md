@@ -54,17 +54,17 @@ Thats the high level
 **Now We have a brand new types file which manage our user inputs and there validation**
 
 ```javascript
-const z = require("zod");
+const zod = require("zod");
 
 
-const createTodo = z.object({
-    title: z.string,
-    description: z.string
+const createTodo = zod.object({
+    title: zod.string(),
+    description: zod.string()
 })
 
 
-const updateTodo = z.object({
-    id: z.string
+const updateTodo = zod.object({
+    id: zod.string()
 })
 
 
@@ -90,6 +90,15 @@ app.post("/todo",(req,res)=>{
         return
     }
     // if payload is valid then put the data in database i.e. mongoDB
+      await Todo.create({
+    title: createPayload.title,
+    description: createPayload.description,
+    completed: false
+  });
+
+  res.json({
+    msg: "todo is created successfully",
+  });
  
 })
 
@@ -115,6 +124,14 @@ app.put("/completed", async (req, res) => {
 });
 
 // update in mongodb
+await Todo.updateOne(
+    { _id: req.body.id,},
+    { completed: true }
+  );
+
+  res.json({
+    msg: "bravo your task has been updated",
+  });
 
 })
 
