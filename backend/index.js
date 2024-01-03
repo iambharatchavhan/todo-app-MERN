@@ -2,10 +2,12 @@
 const express = require("express");
 const { Todo } = require("./database");
 const { createTodo, updateTodo } = require("./types");  
+const cors = require('cors')
 const app = express();
 const port = 3000;
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/demo",(req,res)=>{
     res.send("Hello world")
@@ -16,10 +18,12 @@ app.get("/demo",(req,res)=>{
 app.post("/todo", async (req, res) => {
   const createPayload = req.body;
   const parsedPayload = createTodo.safeParse(createPayload);
+  
   if (!parsedPayload.success) {
     res.status(411).json({ message: "please provide valid inputs" });
     return;
   }
+
   // put the data in mongodb
   await Todo.create({
     title: createPayload.title,
@@ -63,4 +67,4 @@ app.put("/completed", async (req, res) => {
 });
 
 
-app.listen(port);J
+app.listen(port);
