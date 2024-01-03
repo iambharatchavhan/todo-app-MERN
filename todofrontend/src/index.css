@@ -1,0 +1,112 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.parent{
+  width: 98svw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+#form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:.8rem;
+  width: 900px;
+ 
+ 
+}
+
+#form input{
+   width: 95%;
+   padding: .9rem .8rem;
+   outline: none;
+   font-size: 1.2rem;
+   
+}
+.addTodoBtn{
+  width:40%;
+  padding: 1rem .5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: #595959;
+  color: #f1f1f1;
+  border-radius: 10px;
+  border: none;
+ 
+}
+
+.title{
+  font-size: 1.5rem;
+  word-wrap: break-word;
+}
+.description{
+  font-size:1.2rem;
+  font-weight: 500;
+  margin-top: -.8rem;
+}
+.titleParent{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.completed{
+  width:20px;
+}
+.todoList{
+ width:850px;
+}
+
+
+
+
+/* General styles for all devices */
+
+@media only screen and (max-width: 600px) {
+  /* Styles for devices with a screen width up to 600 pixels */
+  #form{
+    width: 320px;
+   }
+   .todoList{
+    width: 320px;
+   }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Styles for devices with a screen width between 601 and 1024 pixels */
+  #form{
+    width: 700px;
+  }
+  .todoList{
+    width: 700px;
+  }
+
+}
+
+@media only screen and (min-width: 1025px) {
+  /* Styles for devices with a screen width greater than 1024 pixels */
+}
+
+
+
+
+
+
