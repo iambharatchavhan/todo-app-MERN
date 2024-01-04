@@ -4,7 +4,6 @@ import Todo from './components/Todo'
 import Todos from './components/Todos'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [todos, SetTodos] = useState([])
 
  
@@ -13,12 +12,15 @@ function App() {
      const data = await fetch("http://localhost:3000/todos")
      const totosData = await data.json()   
     SetTodos(totosData)
+ 
    }
 
 
 
   useEffect(()=>{
-       handleTodoData()
+
+      handleTodoData()
+   
   },[])
 
   // console.log(todos)
