@@ -18,9 +18,7 @@ function App() {
 
 
   useEffect(()=>{
-
       handleTodoData()
-   
   },[])
 
   // console.log(todos)
@@ -29,7 +27,7 @@ function App() {
   return (
     <main className='parent'>
       <h1>Todo App</h1>
-     <Todo/>
+     <Todo handleTodoData = {handleTodoData}/>
      <Todos todos={todos}/>
     </main>
   )

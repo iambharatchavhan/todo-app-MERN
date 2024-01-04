@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-export default function Todo() {
+export default function Todo({handleTodoData}) {
+
+   
 
      const [title,setTitle] = useState();
      const [description ,setDescription]= useState()
@@ -19,7 +21,7 @@ export default function Todo() {
       })
 
      if(fetchData.ok){
-      
+       handleTodoData()
      }
 
      }
@@ -27,14 +29,14 @@ export default function Todo() {
 
 
   return (
-    <>
-      <form id="form">
+    <div id="form">
+    
         <input type="text" name="" placeholder="Enter title"  onChange={(e)=>setTitle(e.target.value)}/>
      
         <input type="text" name="" placeholder="Enter  description" onChange={(e)=>setDescription(e.target.value)} />
     
         <button className="addTodoBtn" onClick={handleSubmitData}>Add Todo</button>
-      </form>
-    </>
+   
+    </div>
   );
 }

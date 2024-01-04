@@ -82,6 +82,9 @@
 
 }
 .mark{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   text-decoration: line-through 5px green;
 }
 
