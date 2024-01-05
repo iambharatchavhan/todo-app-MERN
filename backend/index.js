@@ -13,7 +13,7 @@ app.use(cors(),{
    
 });
 
-app.get("/demo", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
