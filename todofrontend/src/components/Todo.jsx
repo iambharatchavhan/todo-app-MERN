@@ -22,7 +22,8 @@ export default function Todo({handleTodoData}) {
 
      if(fetchData.ok){
        handleTodoData()
-    
+       setTitle("")
+       setDescription("")
      }
 
      }
@@ -32,9 +33,9 @@ export default function Todo({handleTodoData}) {
   return (
     <div id="form">
     
-        <input type="text" name="" required placeholder="Enter title"  onChange={(e)=>setTitle(e.target.value)}/>
+        <input type="text" name="" value={title} required placeholder="Enter title"  onChange={(e)=>setTitle(e.target.value)}/>
      
-        <input type="text" name="" required placeholder="Enter  description" onChange={(e)=>setDescription(e.target.value)} />
+        <input type="text" name="" value={description} required placeholder="Enter  description" onChange={(e)=>setDescription(e.target.value)} />
     
         <button className="addTodoBtn" onClick={handleSubmitData}>Add Todo</button>
    
