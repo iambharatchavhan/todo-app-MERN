@@ -5,7 +5,7 @@ export default function Empty() {
     <div className='nothingToDo'>
         
 <img src='https://media4.giphy.com/media/lN2xmtmECqhpGfbHGe/200w.webp?cid=ecf05e472efamml6s4h17yvpgh185ir2skaitciqbyt6emou&ep=v1_stickers_search&rid=200w.webp&ct=s' alt='empty'/>
-        
+      <h3>Noting To Do 😁 </h3>  
    </div>
   )
 }

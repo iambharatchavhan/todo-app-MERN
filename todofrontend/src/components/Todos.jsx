@@ -44,13 +44,13 @@ export default function Todos({ todos,handleTodoData }) {
 
   }
 
-  console.log(todos.todoData.length)
+ 
 
   return (
 
 
     <>
-      {!todos.todoData.length ? (
+      {!todos.todoData?.length ? (
         <Empty/>
       ) : (
         todos.todoData.map((todo) => (
