@@ -1,8 +1,10 @@
 # Simple TO-DO app (fullstack)
 
-Features:
+Features:CRUD
  - User can add TODOs
  - User can Read TODOs
  - User can mark TODO as done 
+ - User can delete TODO 
+
 
  
