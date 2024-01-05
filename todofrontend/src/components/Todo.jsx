@@ -8,7 +8,7 @@ export default function Todo({handleTodoData}) {
      const [description ,setDescription]= useState()
 
      const handleSubmitData= async () => {
-        const fetchData = await fetch("http://localhost:3000/todo",{
+        const fetchData = await fetch("https://todo-app-mern-by-bharat-backend-api.vercel.app/todo",{
           method:"POST",
           body: JSON.stringify({
             title:title,
