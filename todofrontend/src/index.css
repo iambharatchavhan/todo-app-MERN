@@ -50,7 +50,7 @@
   color: #f1f1f1;
   border-radius: 10px;
   border: none;
- 
+  cursor: pointer;
 }
 
 .title{
@@ -81,6 +81,7 @@
 .checkbox{
   width: 20px;
   height: 20px;
+  cursor: pointer;
    
 }
 input[type='checkbox'] {
@@ -92,6 +93,7 @@ input[type='checkbox'] {
   font-size: 2rem;
   color: #990707;
   padding-top: .5rem;
+  cursor: pointer;
 }
 
 /* checkbox animation */
