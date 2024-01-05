@@ -28,7 +28,7 @@ function App() {
     <main className='parent'>
       <h1>Todo App</h1>
      <Todo handleTodoData = {handleTodoData}/>
-     <Todos todos={todos}/>
+     <Todos todos={todos} handleTodoData = {handleTodoData}/>
     </main>
   )
 }
