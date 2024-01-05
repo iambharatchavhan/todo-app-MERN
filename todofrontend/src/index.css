@@ -66,26 +66,57 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+ 
 }
 
-.completed{
-  width:20px;
+.action-btn{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .2rem;
+
 }
+/* checkbox animation */
+
+.checkbox{
+  width: 20px;
+  height: 20px;
+   
+}
+input[type='checkbox'] {
+  accent-color: rgb(13, 197, 13);
+}
+.delete{
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #990707;
+  padding-top: .5rem;
+}
+
+/* checkbox animation */
+
 .todoList{
  width:890px;
  display: flex;
  flex-direction: column;
+ justify-content: center;
+
  padding:.1rem 1rem;
  border-radius: 5px;
  margin-top: .9rem;
  background: #363636;
 
+
 }
 .mark{
-  display: flex;
-  justify-content: space-between;
+  font-size: 1.5rem;
+  word-wrap: break-word;
   width: 100%;
-  text-decoration: line-through 5px green;
+  text-decoration: line-through 2px #fff;
+}
+.nothingToDo{
+  margin-top: 2rem;
 }
 
 
