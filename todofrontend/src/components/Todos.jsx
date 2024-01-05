@@ -7,7 +7,7 @@ export default function Todos({ todos,handleTodoData }) {
   const handleMarkedTodo = async (id) => {
 
     // This is for marked todo
-    const jsonData = await fetch("http://localhost:3000/completed", {
+    const jsonData = await fetch("https://todo-app-mern-by-bharat-backend-api.vercel.app/completed", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ export default function Todos({ todos,handleTodoData }) {
 
   // This is for delete Todo
   const handleDelete = async (id) =>{
-    const deleteData = await fetch("http://localhost:3000/deleted",{
+    const deleteData = await fetch("https://todo-app-mern-by-bharat-backend-api.vercel.app/deleted",{
       method:"DELETE",
       headers:{
         "Content-Type":"application/json"
