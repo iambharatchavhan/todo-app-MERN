@@ -10,7 +10,7 @@ function App() {
  
 
    const handleTodoData = async () => {
-     const data = await fetch("http://localhost:3000/todos")
+     const data = await fetch("https://todo-app-mern-by-bharat-backend-api.vercel.app/todos")
      const totosData = await data.json()   
     SetTodos(totosData)
  
