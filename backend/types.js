@@ -11,9 +11,12 @@ const updateTodo = zod.object({
     id: zod.string()
 })
 
-
+const deleteTodo = zod.object({
+    id:zod.string()
+})
 
 module.exports = {
     createTodo,
-    updateTodo
+    updateTodo,
+    deleteTodo
 }
