@@ -7,7 +7,7 @@ const port = 3000;
 
 app.use(express.json());
 app.use(cors(),{
- origin:[],
+ origin:["https://todo-app-mern-front-end-by-bharat.vercel.app"],
   methods:["POST", "GET", "PUT", "DELETE"],
   credentials: true
    
